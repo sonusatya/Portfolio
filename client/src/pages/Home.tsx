@@ -2,6 +2,7 @@ import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
 import { Skills } from "@/sections/Skills";
 import { ExperienceSection } from "@/sections/Experience";
+import { EducationSection } from "@/sections/Education";
 import { Projects } from "@/sections/Projects";
 import { Contact } from "@/sections/Contact";
 import { usePortfolioData } from "@/hooks/usePortfolioData";
@@ -47,7 +48,9 @@ export function Home({ onOpenChat }: HomeProps) {
 
       <Skills skills={skills} />
 
-      <ExperienceSection experience={experience} education={education} />
+      <ExperienceSection experience={experience} />
+
+      <EducationSection education={education} />
 
       {/* Skeleton while projects load so the layout doesn't jump */}
       {loading && projects.length === 0 ? (

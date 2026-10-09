@@ -80,6 +80,10 @@ export default function App() {
               element={<Navigate to="/#experience" replace />}
             />
             <Route
+              path="/education"
+              element={<Navigate to="/#education" replace />}
+            />
+            <Route
               path="/projects"
               element={<Navigate to="/#projects" replace />}
             />

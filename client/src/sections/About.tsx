@@ -89,7 +89,6 @@ export function About({ education = [], experience = [] }: AboutProps) {
           {/* ---------------- Right: text ---------------- */}
           <div className="lg:col-span-7">
             <SectionHeading
-              index="01"
               label="About"
               title={
                 <>
@@ -156,11 +155,11 @@ export function About({ education = [], experience = [] }: AboutProps) {
           </div>
         </div>
 
-        {/* ---------------- Pillars: 01/BUILD · 02/DESIGN · 03/EXPLORE ---------------- */}
-        <div className="mt-20 grid gap-5 md:grid-cols-3">
+        {/* ---------------- Pillars: BUILD · DESIGN · EXPLORE ---------------- */}
+        <div className="mt-20 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
           {PILLARS.map((p, i) => (
             <motion.article
-              key={p.index}
+              key={p.label}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -171,14 +170,12 @@ export function About({ education = [], experience = [] }: AboutProps) {
               <div className="pointer-events-none absolute -top-24 right-0 h-48 w-48 rounded-full bg-brand-500/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
               <div className="relative">
-                <div className="flex items-baseline gap-2.5">
-                  <span className="font-display text-3xl font-bold text-brand-400/70 transition-colors duration-300 group-hover:text-brand-300">
-                    {p.index}
-                  </span>
-                  <span className="label-mono text-faint">/ {p.label}</span>
-                </div>
+                <span className="label-mono inline-flex items-center gap-2 text-brand-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-400" aria-hidden="true" />
+                  {p.label}
+                </span>
 
-                <h3 className="mt-4 text-xl text-ink">{p.title}</h3>
+                <h3 className="mt-3 text-xl text-ink">{p.title}</h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-muted">
                   {p.description}
                 </p>

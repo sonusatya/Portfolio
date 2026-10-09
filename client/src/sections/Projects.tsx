@@ -32,7 +32,6 @@ export function Projects({ projects = [] }: ProjectsProps) {
       <div className="container-x">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
-            index="04"
             label="Projects"
             title={
               <>

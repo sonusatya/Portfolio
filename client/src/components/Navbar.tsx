@@ -90,10 +90,10 @@ export function Navbar({ onOpenChat }: NavbarProps) {
                     e.preventDefault();
                     handleNavClick(link.href);
                   }}
-                  className="group relative block px-3.5 py-2 text-sm text-muted transition-colors duration-200 hover:text-ink"
+                  className="group relative block px-3 py-2 text-sm text-muted transition-colors duration-200 hover:text-ink"
                 >
                   {link.label}
-                  <span className="absolute inset-x-3.5 bottom-1 h-px origin-left scale-x-0 bg-gradient-to-r from-brand-400 to-accent-400 transition-transform duration-300 group-hover:scale-x-100" />
+                  <span className="absolute inset-x-3 bottom-1 h-px origin-left scale-x-0 bg-gradient-to-r from-brand-400 to-accent-400 transition-transform duration-300 group-hover:scale-x-100" />
                 </a>
               ) : (
                 <NavLink
@@ -160,18 +160,14 @@ export function Navbar({ onOpenChat }: NavbarProps) {
                       className="flex items-center justify-between rounded-lg px-3 py-3 text-[15px] text-ink transition-colors hover:bg-white/[0.05]"
                     >
                       {link.label}
-                      <span className="label-mono text-[10px]">
-                        0{i + 1}
-                      </span>
                     </a>
                   ) : (
                     <Link
                       to={`/${link.href}`}
                       onClick={() => setMenuOpen(false)}
-                      className="flex items-center justify-between rounded-lg px-3 py-3 text-[15px] text-ink transition-colors hover:bg-white/[0.05]"
+                      className="flex items-center rounded-lg px-3 py-3 text-[15px] text-ink transition-colors hover:bg-white/[0.05]"
                     >
                       {link.label}
-                      <span className="label-mono text-[10px]">0{i + 1}</span>
                     </Link>
                   )}
                 </motion.li>

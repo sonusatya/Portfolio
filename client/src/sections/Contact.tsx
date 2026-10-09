@@ -106,7 +106,6 @@ export function Contact() {
 
       <div className="container-x">
         <SectionHeading
-          index="05"
           label="Contact"
           title={
             <>

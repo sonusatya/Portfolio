@@ -11,7 +11,10 @@ export function AIOrb({ size = 260 }: { size?: number }) {
   return (
     <div
       className="relative grid place-items-center"
-      style={{ width: size, height: size }}
+      style={{
+        width: `min(${size}px, 68vw)`,
+        height: `min(${size}px, 68vw)`,
+      }}
       aria-hidden="true"
     >
       {/* Outermost soft glow */}

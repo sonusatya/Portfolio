@@ -57,7 +57,6 @@ export function Skills({ skills = [] }: SkillsProps) {
 
       <div className="container-x">
         <SectionHeading
-          index="02"
           label="Skills"
           title={
             <>
