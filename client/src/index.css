@@ -1,0 +1,354 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN TOKENS
+   Dark, futuristic "AI Digital Universe" theme.
+   ============================================================ */
+@theme {
+  /* Surfaces — near-black with a cool blue tint */
+  --color-void: #05060b;
+  --color-surface: #0a0c15;
+  --color-surface-2: #0f1220;
+  --color-elevated: #141828;
+  --color-line: #1e2438;
+  --color-line-soft: #171c2e;
+
+  /* Text */
+  --color-ink: #eef1f8;
+  --color-muted: #9aa3b8;
+  --color-faint: #626c85;
+
+  /* Brand — electric cyan */
+  --color-brand-50: #eafcff;
+  --color-brand-100: #c5f6ff;
+  --color-brand-200: #8eecff;
+  --color-brand-300: #4fdcff;
+  --color-brand-400: #1cc8f5;
+  --color-brand-500: #06a9d9;
+  --color-brand-600: #0287ae;
+  --color-brand-700: #056b8c;
+  --color-brand-800: #0a5570;
+  --color-brand-900: #0d475e;
+
+  /* Accent — violet (pairs with cyan for the aurora look) */
+  --color-accent-300: #c4b5fd;
+  --color-accent-400: #a78bfa;
+  --color-accent-500: #8b5cf6;
+  --color-accent-600: #7c3aed;
+
+  /* Status */
+  --color-success: #34d399;
+  --color-warn: #fbbf24;
+  --color-danger: #f87171;
+
+  /* Typography */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Radius + shadow */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-2xl: 34px;
+
+  --shadow-glow: 0 0 0 1px rgb(28 200 245 / 0.16), 0 12px 48px -12px rgb(28 200 245 / 0.32);
+  --shadow-glow-lg: 0 0 0 1px rgb(28 200 245 / 0.2), 0 24px 90px -20px rgb(139 92 246 / 0.4);
+  --shadow-card: 0 1px 0 0 rgb(255 255 255 / 0.03) inset, 0 18px 50px -24px rgb(0 0 0 / 0.9);
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --breakpoint-xs: 26rem;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+@layer base {
+  :root {
+    color-scheme: dark;
+    --nav-h: 72px;
+  }
+
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 16px);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-void);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Accessible focus ring */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-400);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-void);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--color-line), var(--color-line-soft));
+    border-radius: 99px;
+    border: 2px solid var(--color-void);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-700);
+  }
+
+  ::selection {
+    background: rgb(28 200 245 / 0.28);
+    color: #fff;
+  }
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+@layer utilities {
+  .container-x {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 76rem;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 48rem) {
+    .container-x {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* Gradient headline text */
+  .text-aurora {
+    background: linear-gradient(
+      115deg,
+      var(--color-brand-200) 0%,
+      var(--color-brand-400) 32%,
+      var(--color-accent-400) 68%,
+      var(--color-accent-300) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Frosted glass card */
+  .glass {
+    background: linear-gradient(
+      160deg,
+      rgb(255 255 255 / 0.045) 0%,
+      rgb(255 255 255 / 0.012) 100%
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgb(255 255 255 / 0.07);
+  }
+
+  .glass-strong {
+    background: linear-gradient(
+      160deg,
+      rgb(20 24 40 / 0.92) 0%,
+      rgb(10 12 21 / 0.94) 100%
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgb(255 255 255 / 0.08);
+  }
+
+  /* Hairline that fades at both ends */
+  .hairline-x {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-line) 20%,
+      var(--color-line) 80%,
+      transparent
+    );
+  }
+
+  /* Monospace label style used for section indices: 01 / BUILD */
+  .label-mono {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Ambient background grid + aurora blobs */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.028) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.028) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 40%, transparent 100%);
+  }
+
+  .animate-float {
+    animation: float 7s ease-in-out infinite;
+  }
+  .animate-pulse-dot {
+    animation: pulseDot 2.2s ease-in-out infinite;
+  }
+  .animate-spin-slow {
+    animation: spin 14s linear infinite;
+  }
+  .animate-spin-slower {
+    animation: spin 26s linear infinite;
+  }
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgb(52 211 153 / 0.5);
+  }
+  50% {
+    opacity: 0.85;
+    box-shadow: 0 0 0 7px rgb(52 211 153 / 0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes auroraShift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(4%, -3%, 0) scale(1.08);
+  }
+  66% {
+    transform: translate3d(-3%, 4%, 0) scale(0.95);
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0.03) 25%,
+    rgb(255 255 255 / 0.09) 50%,
+    rgb(255 255 255 / 0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s linear infinite;
+}
+
+.animate-aurora {
+  animation: auroraShift 22s ease-in-out infinite;
+}
+
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  margin-left: 3px;
+  background: var(--color-brand-400);
+  vertical-align: text-bottom;
+  animation: blink 1.05s steps(1) infinite;
+}
+
+/* ============================================================
+   REDUCED MOTION — respect user preference
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
