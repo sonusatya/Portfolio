@@ -41,7 +41,7 @@ PROJECTS:
    Frontend tools: React 19, TypeScript, Vite, Tailwind CSS v4, Framer Motion
    Backend tools: Express 5, Node.js, Zod validation, JWT, Bcrypt, Helmet, rate limiting
    Database: MongoDB Atlas using the Mongoose ODM (projects, skills, experience, education, messages)
-   AI: Google Gemini (gemini-2.0-flash), grounded in a verified portfolio context block with an offline keyword fallback. The API key stays server-side only.
+   AI: Google Gemini (gemini-3.8-flash), grounded in a verified portfolio context block with an offline keyword fallback. The API key stays server-side only.
    Highlights:
    - Gemini assistant grounded in verified portfolio context with an offline fallback
    - Express 5 + TypeScript layered API with Zod validation and centralized error handling

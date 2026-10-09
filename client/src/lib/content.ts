@@ -143,7 +143,7 @@ export const FALLBACK_PROJECTS: Project[] = [
       "This is the very site you're browsing — built to showcase my work and let recruiters talk to an AI that actually knows my projects, skills and experience.",
       "Frontend: React 19 + TypeScript, Vite, Tailwind CSS v4 and Framer Motion for the animated AI-orb hero and floating chat panel.",
       "Backend: Express 5 + TypeScript in a layered structure, MongoDB Atlas via Mongoose, Zod validation and a single error-handling middleware.",
-      "AI: Server-side Google Gemini (gemini-2.0-flash) grounded in a curated portfolio context block, with an offline fallback. The API key never reaches the browser.",
+      "AI: Server-side Google Gemini (gemini-3.8-flash) grounded in a curated portfolio context block, with an offline fallback. The API key never reaches the browser.",
     ],
     techStack: [
       "React 19",

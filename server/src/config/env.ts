@@ -27,7 +27,7 @@ const envSchema = z.object({
   ADMIN_PASSWORD: z.string().min(6).default("admin123"),
 
   GEMINI_API_KEY: z.string().default(""),
-  GEMINI_MODEL: z.string().default("gemini-2.0-flash"),
+  GEMINI_MODEL: z.string().default("gemini-3.8-flash"),
 
   CLIENT_URL: z.string().default("http://localhost:5173"),
 });

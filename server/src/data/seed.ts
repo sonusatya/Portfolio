@@ -65,7 +65,7 @@ export const seedProjects = [
       "This is the very site you're browsing — built to showcase my work and let recruiters talk to an AI that actually knows my projects, skills and experience.",
       "Frontend: React 19 with TypeScript, Vite, Tailwind CSS v4 and Framer Motion for the animated 'AI orb' hero, scroll-driven sections and a floating chat panel. Routes are code-split so the landing page stays light.",
       "Backend: Express 5 with TypeScript in a layered structure (routes → controllers → services → models), MongoDB Atlas via Mongoose, and Zod for centralized request validation with a single error-handling middleware.",
-      "AI: A server-side Google Gemini (gemini-2.0-flash) integration. The model is grounded with a curated portfolio context block so answers stay factual, with a keyword-matched offline fallback if the API is unavailable. The API key never reaches the browser.",
+      "AI: A server-side Google Gemini (gemini-3.8-flash) integration. The model is grounded with a curated portfolio context block so answers stay factual, with a keyword-matched offline fallback if the API is unavailable. The API key never reaches the browser.",
       "Security & ops: JWT auth in httpOnly cookies, bcrypt-hashed admin password, helmet, CORS allow-listing, and rate limiting on the AI, contact and login routes. Admins manage projects, skills, experience and messages from a protected dashboard.",
     ],
     techStack: [
@@ -89,7 +89,7 @@ export const seedProjects = [
     timeline: "2026",
     role: "Full-Stack Developer & AI Integration",
     highlights: [
-      "Google Gemini (gemini-2.0-flash) assistant grounded in verified portfolio context with an offline fallback",
+      "Google Gemini (gemini-3.8-flash) assistant grounded in verified portfolio context with an offline fallback",
       "Express 5 + TypeScript layered API with Zod validation and centralized error handling",
       "MongoDB Atlas + Mongoose models for projects, skills, experience, education and messages",
       "JWT auth in httpOnly cookies, bcrypt hashing, helmet, CORS allow-list and route-level rate limiting",

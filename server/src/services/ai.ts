@@ -118,7 +118,7 @@ const FALLBACK_RULES: FallbackRule[] = [
   {
     keywords: ["ai", "llm", "gemini", "openai", "groq", "langchain", "prompt", "chatbot"],
     answer:
-      "Sonu integrates LLMs into real products using Google Gemini, the Groq API (Llama 3.3-70B), OpenAI API and LangChain, with strong prompt engineering. This very assistant is his work — a server-side Gemini (gemini-2.0-flash) integration grounded in his verified portfolio data, with an offline fallback and the API key kept server-side only.",
+      "Sonu integrates LLMs into real products using Google Gemini, the Groq API (Llama 3.3-70B), OpenAI API and LangChain, with strong prompt engineering. This very assistant is his work — a server-side Gemini (gemini-3.8-flash) integration grounded in his verified portfolio data, with an offline fallback and the API key kept server-side only.",
   },
   {
     keywords: ["contact", "email", "reach", "hire", "phone", "call", "message", "available"],
