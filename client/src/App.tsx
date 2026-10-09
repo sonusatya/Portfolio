@@ -4,6 +4,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AIChat } from "@/components/AIChat";
 import { FloatingAIButton } from "@/components/FloatingAIButton";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import { Starfield } from "@/components/Starfield";
 import { Home } from "@/pages/Home";
 
 // Heavier pages are code-split so the landing page stays light.
@@ -50,6 +52,8 @@ export default function App() {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <ScrollProgress />
+      <Starfield />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-void"

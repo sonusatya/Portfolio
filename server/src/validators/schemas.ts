@@ -117,7 +117,7 @@ export const createExperienceSchema = z.object({
   organization: z.string().trim().min(1).max(120),
   role: z.string().trim().min(1).max(120),
   location: z.string().trim().max(120).optional().default("Remote"),
-  type: z.enum(["work", "program", "internship", "volunteer"]).optional().default("program"),
+  type: z.enum(["work", "program", "internship", "course", "volunteer"]).optional().default("program"),
   start: z.string().trim().min(1).max(40),
   end: z.string().trim().max(40).optional().default(""),
   current: z.boolean().optional().default(false),

@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
 import { api } from "@/services/api";
+import {
+  FALLBACK_PROJECTS,
+  FALLBACK_SKILLS,
+  FALLBACK_EXPERIENCE,
+  FALLBACK_EDUCATION,
+} from "@/lib/content";
 import type { Education, Experience, Project, SkillCategory } from "@/types";
 
 interface PortfolioData {
@@ -46,15 +52,22 @@ export function usePortfolioData(): PortfolioData {
 
       if (p.status === "fulfilled") {
         setProjects(p.value.items ?? []);
+      } else {
+        setProjects(FALLBACK_PROJECTS);
       }
       if (s.status === "fulfilled") setSkills(s.value ?? []);
+      else setSkills(FALLBACK_SKILLS);
       if (e.status === "fulfilled") setExperience(e.value ?? []);
+      else setExperience(FALLBACK_EXPERIENCE);
       if (d.status === "fulfilled") setEducation(d.value ?? []);
+      else setEducation(FALLBACK_EDUCATION);
 
       const failed = [p, s, e, d].some((r) => r.status === "rejected");
       if (failed) {
+        // Non-fatal: static fallback content is shown. Surface a soft notice
+        // so live features (AI chat, contact) are known to be offline.
         setError(
-          "Some portfolio data couldn't be loaded. Make sure the API server is running.",
+          "Showing built-in content — the live API is offline, so AI chat and the contact form may not work.",
         );
       }
 

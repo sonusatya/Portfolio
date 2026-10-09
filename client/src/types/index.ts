@@ -46,7 +46,7 @@ export interface Experience {
   organization: string;
   role: string;
   location: string;
-  type: "work" | "program" | "internship" | "volunteer";
+  type: "work" | "program" | "internship" | "course" | "volunteer";
   start: string;
   end: string;
   current: boolean;

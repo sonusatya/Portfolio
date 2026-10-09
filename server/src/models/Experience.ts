@@ -7,7 +7,7 @@ const experienceSchema = new Schema(
     location: { type: String, trim: true, default: "Remote" },
     type: {
       type: String,
-      enum: ["work", "program", "internship", "volunteer"],
+      enum: ["work", "program", "internship", "course", "volunteer"],
       default: "program",
     },
     start: { type: String, required: true, trim: true },

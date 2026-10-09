@@ -103,32 +103,32 @@ const FALLBACK_RULES: FallbackRule[] = [
   {
     keywords: ["project", "built", "build", "work", "portfolio", "grocnest", "doodley"],
     answer:
-      "Sonu has shipped 5+ full-stack projects. Two highlights: GrocNest, a MERN grocery e-commerce platform with JWT auth, cart and checkout (live at grocnest.vercel.app), and Dr. Doodley, a veterinary services platform built with React, Vite and Tailwind CSS featuring 8 modular components, an FAQ accordion and a booking form. Check the Projects section for details.",
+      "Sonu has shipped 5+ full-stack projects. Highlights: GrocNest, a MERN grocery e-commerce platform (React + Redux frontend, Express REST API, MongoDB Atlas + Mongoose, JWT auth, Cloudinary images — live at grocnest.vercel.app); this AI Portfolio itself (React 19 + TypeScript + Express 5 + MongoDB + Google Gemini AI assistant); and Dr. Doodley, a veterinary platform with 8 modular React components. Check the Projects section for full details.",
   },
   {
     keywords: ["stack", "tech", "skill", "technology", "language", "tool", "framework"],
     answer:
-      "Sonu works across the MERN stack — React, TypeScript, Node.js, Express and MongoDB. Frontend: React, Vite, Tailwind CSS, Redux Toolkit, Framer Motion. Backend: Express, REST APIs, JWT auth, Mongoose, Socket.io. He also uses Python, Java + DSA, Docker, CI/CD, Redis and Git, and integrates LLMs via Groq, OpenAI and Gemini.",
+      "Sonu works across the MERN stack — React, TypeScript, Node.js, Express and MongoDB. Frontend: React, Vite, Tailwind CSS, Redux Toolkit, Framer Motion. Backend: Express, REST APIs, JWT auth, Mongoose, Socket.io. Databases: MongoDB Atlas and Neon (Postgres). He also uses Python, Java + DSA, Docker, CI/CD, Redis, Cloudinary and Git, and integrates LLMs via Google Gemini, Groq, OpenAI and LangChain.",
   },
   {
-    keywords: ["backend", "architecture", "api", "database", "schema", "design", "server"],
+    keywords: ["backend", "architecture", "api", "database", "schema", "design", "server", "mongo", "atlas"],
     answer:
-      "Sonu designs RESTful APIs with Express and Mongoose, using JWT authentication with bcrypt password hashing, centralized validation via Zod and consistent error handling. He's worked with both MongoDB (document) and SQL/Neon (relational) data models, and deploys backends to Render.",
+      "Sonu designs RESTful APIs with Express using a layered structure (routes → controllers → services → models), MongoDB Atlas with the Mongoose ODM for documents, and SQL/Neon for relational data. He uses JWT auth in httpOnly cookies, bcrypt hashing, Zod for centralized validation, a single error-handling middleware, and deploys backends to Render.",
   },
   {
     keywords: ["ai", "llm", "gemini", "openai", "groq", "langchain", "prompt", "chatbot"],
     answer:
-      "Sonu has hands-on AI integration experience — wiring LLMs into real products using the Groq API (Llama 3.3-70B), OpenAI API, Google Gemini and LangChain, with strong prompt engineering skills. This very assistant is an example of his AI work.",
+      "Sonu integrates LLMs into real products using Google Gemini, the Groq API (Llama 3.3-70B), OpenAI API and LangChain, with strong prompt engineering. This very assistant is his work — a server-side Gemini (gemini-2.0-flash) integration grounded in his verified portfolio data, with an offline fallback and the API key kept server-side only.",
   },
   {
     keywords: ["contact", "email", "reach", "hire", "phone", "call", "message", "available"],
     answer:
-      "You can reach Sonu at sonusatyajnu2005@gmail.com or +91-7209080805. He's based in Jaipur, Rajasthan and is open to SDE / Web Developer roles at product-focused companies and funded startups. There's also a contact form in the Contact section, plus links to his GitHub and LinkedIn.",
+      "You can reach Sonu at sonusatyajnu2005@gmail.com or +91-7209080805. He's based in Jaipur, Rajasthan and is open to SDE / Web Developer roles at product-focused companies and funded startups. There's a contact form in the Contact section, plus links to his GitHub and LinkedIn.",
   },
   {
-    keywords: ["experience", "education", "college", "university", "degree", "course", "internship", "apna"],
+    keywords: ["experience", "education", "college", "university", "degree", "course", "internship", "apna", "cisco", "cyber", "dsa"],
     answer:
-      "Sonu is pursuing a B.Tech in Computer Science & Engineering at Jagannath University, Jaipur (Jul 2023 – Jul 2027, CGPA 8.4). He completed Apna College's 9-month Delta Full Stack program (Aug 2024 – Jul 2025) with 100% module completion, delivering 5+ end-to-end projects covering JWT auth, database design and REST APIs.",
+      "Sonu is pursuing a B.Tech in CSE at Jagannath University, Jaipur (Jul 2023 – Jul 2027, CGPA 8.4). His experience: a Cisco Networking Academy Introduction to Cybersecurity internship (Aug 2025), Apna College's 9-month Delta Full Stack program (Aug 2024 – Jul 2025, 100% completion, 5+ projects), and self-paced Data Structures & Algorithms coursework in Java. All three have certificates.",
   },
   {
     keywords: ["github", "code", "repository", "repo", "source"],
