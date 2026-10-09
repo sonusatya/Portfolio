@@ -51,6 +51,8 @@ export interface Experience {
   end: string;
   current: boolean;
   certificate?: string;
+  /** Link that opens the certificate when the badge is clicked. */
+  certificateUrl?: string;
   bullets: string[];
   order: number;
 }

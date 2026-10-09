@@ -122,6 +122,16 @@ export const createExperienceSchema = z.object({
   end: z.string().trim().max(40).optional().default(""),
   current: z.boolean().optional().default(false),
   certificate: z.string().trim().max(120).optional().default(""),
+  certificateUrl: z
+    .string()
+    .trim()
+    .max(500)
+    .optional()
+    .default("")
+    .refine(
+      (v) => v === "" || /^https?:\/\/\S+$/.test(v) || v.startsWith("/"),
+      "Certificate URL must be a valid http(s) link or a root-relative path like /certificates/x.pdf",
+    ),
   bullets: z.array(z.string().trim().min(1)).max(15).optional().default([]),
   order: z.number().int().optional(),
 });

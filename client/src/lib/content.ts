@@ -63,7 +63,7 @@ export const PILLARS = [
 export const STATS = [
   { value: "9", suffix: "mo", label: "Delta Full-Stack Program" },
   { value: "5", suffix: "+", label: "Full-Stack Projects Shipped" },
-  { value: "7.2", suffix: "", label: "B.Tech CSE CGPA" },
+  { value: "8.4", suffix: "", label: "B.Tech CSE CGPA" },
   { value: "2027", suffix: "", label: "Graduating" },
 ] as const;
 

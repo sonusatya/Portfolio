@@ -5,6 +5,7 @@ import {
   MapPin,
   Award,
   CheckCircle2,
+  ExternalLink,
 } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Education, Experience } from "@/types";
@@ -81,12 +82,25 @@ export function ExperienceSection({
                           <MapPin className="h-3 w-3" />
                           {exp.location}
                         </span>
-                        {exp.certificate && (
-                          <span className="inline-flex items-center gap-1.5 text-success/80">
-                            <Award className="h-3 w-3" />
-                            {exp.certificate}
-                          </span>
-                        )}
+                        {exp.certificate &&
+                          (exp.certificateUrl ? (
+                            <a
+                              href={exp.certificateUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title={`Open ${exp.certificate}`}
+                              className="inline-flex items-center gap-1.5 text-success/90 underline decoration-dotted underline-offset-2 transition-colors hover:text-success hover:decoration-solid"
+                            >
+                              <Award className="h-3 w-3" />
+                              {exp.certificate}
+                              <ExternalLink className="h-2.5 w-2.5 opacity-70" />
+                            </a>
+                          ) : (
+                            <span className="inline-flex items-center gap-1.5 text-success/80">
+                              <Award className="h-3 w-3" />
+                              {exp.certificate}
+                            </span>
+                          ))}
                       </div>
 
                       {exp.bullets.length > 0 && (

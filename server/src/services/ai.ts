@@ -128,7 +128,7 @@ const FALLBACK_RULES: FallbackRule[] = [
   {
     keywords: ["experience", "education", "college", "university", "degree", "course", "internship", "apna"],
     answer:
-      "Sonu is pursuing a B.Tech in Computer Science & Engineering at Jagannath University, Jaipur (Jul 2023 – Jul 2027, CGPA 7.2). He completed Apna College's 9-month Delta Full Stack program (Aug 2024 – Jul 2025) with 100% module completion, delivering 5+ end-to-end projects covering JWT auth, database design and REST APIs.",
+      "Sonu is pursuing a B.Tech in Computer Science & Engineering at Jagannath University, Jaipur (Jul 2023 – Jul 2027, CGPA 8.4). He completed Apna College's 9-month Delta Full Stack program (Aug 2024 – Jul 2025) with 100% module completion, delivering 5+ end-to-end projects covering JWT auth, database design and REST APIs.",
   },
   {
     keywords: ["github", "code", "repository", "repo", "source"],

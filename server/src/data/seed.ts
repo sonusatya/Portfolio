@@ -198,7 +198,7 @@ export const seedEducation = [
     location: "Jaipur, Rajasthan",
     start: "Jul 2023",
     end: "Expected Jul 2027",
-    score: "7.2",
+    score: "8.4",
     scoreLabel: "CGPA",
     order: 1,
     coursework: [

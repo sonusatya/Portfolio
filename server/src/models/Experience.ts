@@ -14,6 +14,8 @@ const experienceSchema = new Schema(
     end: { type: String, trim: true, default: "" },
     current: { type: Boolean, default: false },
     certificate: { type: String, trim: true, default: "" },
+    /** Optional link that opens the certificate (external URL or a file in /public) */
+    certificateUrl: { type: String, trim: true, default: "" },
     bullets: { type: [String], default: [] },
     order: { type: Number, default: 0 },
   },

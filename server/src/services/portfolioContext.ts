@@ -59,7 +59,7 @@ EXPERIENCE:
 
 EDUCATION:
 - Jagannath University, Jaipur, Rajasthan — Bachelor of Technology, Computer Science & Engineering
-  - Jul 2023 to Expected Jul 2027 — CGPA: 7.2
+  - Jul 2023 to Expected Jul 2027 — CGPA: 8.4
   - Coursework: Data Structures & Algorithms, Operating Systems, DBMS, Computer Networks, OOP
 
 HOW SONU DESIGNS A BACKEND (typical approach):
